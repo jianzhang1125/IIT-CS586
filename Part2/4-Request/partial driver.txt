@@ -1,0 +1,102 @@
+main () { // partial driver
+….
+ACCOUNT_2 account2;
+
+      clearscreen();
+      cout<< "                          ACCOUNT-2" << endl;
+
+      cout<< "                  MENU of Operations" << endl;
+      cout<< "          0. OPEN(int,int,int)" << endl;
+      cout<< "          1. LOGIN(int)" << endl;
+      cout<< "          2. PIN(int)" << endl;
+      cout<< "          3. DEPOSIT(int)" << endl;
+      cout<< "          4. WITHDRAW(int)" << endl;
+      cout<< "          5. BALANCE()" << endl;
+      cout<< "          6. LOGOUT()" << endl;
+      cout<< "          7. suspend()" << endl;
+      cout<< "          8. activate()" << endl;
+      cout<< "          9. close()" << endl;
+      cout<< "          q. Quit the demo program" << endl;
+
+
+      cout<< "  Please make a note of these operations" << endl;
+
+
+      cout<< "           ACCOUNT-2 Execution" << endl;
+      ch='1';
+      while (ch !='q') {
+	cout<< "  Select Operation: "<<endl;
+        cout<<"0-OPEN,1-LOGIN,2-PIN,3-DEPOSIT,4-WITHDRAW,5-BALANCE,6-LOGOUT,7-suspend,8-activate,9-close"<<endl;
+        ch=getch();
+
+        switch (ch) { 
+	    case '0':   //OPEN
+			cout<<"  Operation:  OPEN(int p, int y, int a)"<<endl;
+			cout<<"  Enter value of the parameter p:"<<endl;
+			cin>>p;
+			cout<<"  Enter value of the parameter y:"<<endl;
+			cin>>y;
+			cout<<"  Enter value of the parameter a:"<<endl;
+			cin>>a;
+			account2.OPEN(p,y,a);
+			break;
+
+	   case '1':  //LOGIN
+			cout<<"  Operation:  LOGIN(int y)"<<endl;
+			cout<<"  Enter value of the parameter y:"<<endl;
+			cin>>y;
+			account2.LOGIN(y);
+			break;
+
+	    case '2':  //PIN
+			cout<<"  Operation:  PIN(int x)"<<endl;
+			cout<<"  Enter value of the parameter x"<<endl;
+			cin >> x;
+			account2.PIN(x);
+			break;
+				
+	    case '3':  // DEPOSIT
+			cout<<"  Operation:  DEPOSIT(int d)"<<endl;
+			cout<<"  Enter value of the parameter d:"<<endl;
+			cin >> d;
+			account2.DEPOSIT(d);
+			break;
+
+	    case '4':  // WITHDRAW
+			cout<<"  Operation:  WITHDRAW(int w)"<<endl;
+			cout<<"  Enter value of the parameter w:"<<endl;
+			cin >> w;
+			account2.WITHDRAW(w);
+			break;
+
+	    case '5':  // BALANCE
+			cout<<"  Operation:  BALANCE()"<<endl;
+			account2.BALANCE();
+			break;
+
+	    case '6':  // LOGOUT
+			cout<<"  Operation:  LOGOUT()"<<endl;		
+			account2.LOGOUT();
+			break;
+
+	    case '7':  // suspend
+			cout<<"  Operation:  suspend()"<<endl;
+			account2.suspend();
+			break;
+
+	    case '8':  // activate
+			cout<<"  Operation:  activate()"<<endl;
+			account2.activate();
+			break;
+
+	    case '9':  // close
+			cout<<"  Operation:  close()"<<endl;
+			account2.close();
+			break;
+
+
+      };// endswitch
+   }; //endwhile
+
+  
+};

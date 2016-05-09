@@ -1,0 +1,1 @@
+.\jre\bin\java -jar .\CS586TestDriver.jar
